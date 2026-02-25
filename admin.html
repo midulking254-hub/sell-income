@@ -1,0 +1,52 @@
+admin.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<style>
+body{
+font-family: Arial;
+background:#111;
+color:white;
+text-align:center;
+}
+.box{
+background:#222;
+padding:20px;
+margin:20px;
+border-radius:10px;
+}
+input{
+padding:10px;
+margin:10px;
+}
+button{
+padding:10px 20px;
+background:green;
+color:white;
+border:none;
+}
+</style>
+</head>
+<body>
+
+<h1>ADMIN PANEL</h1>
+
+<div class="box">
+<h3>Current Task Rate</h3>
+<p id="rate">1.50 TK</p>
+<input type="number" id="newRate" placeholder="Enter new rate">
+<br>
+<button onclick="changeRate()">Update Rate</button>
+</div>
+
+<script>
+function changeRate(){
+var r = document.getElementById("newRate").value;
+document.getElementById("rate").innerHTML = r + " TK";
+alert("Rate Updated!");
+}
+</script>
+
+</body>
+</html>
